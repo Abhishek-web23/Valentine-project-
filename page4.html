@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Question</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="hearts.css">
+</head>
+
+<body>
+
+<div class="center">
+  <h1>Will you be my Valentine? 💗</h1>
+  <p id="msg"></p>
+
+  <button id="yes" onclick="yes()">YES 💖</button>
+  <button id="no" onclick="no()">NO 🤧</button>
+</div>
+
+<div class="hearts">
+  <span>💗</span><span>💖</span><span>💌</span><span>💗</span>
+  <span>💖</span><span>💗</span><span>💌</span><span>💖</span>
+  <span>💗</span><span>💖</span><span>💗</span><span>💌</span>
+</div>
+
+<script>
+let count = 0;
+let messages = [
+  "Are you sure? 🥺",
+  "Really sure? 💗",
+  "Princess please 🥺💖",
+  "Just think about it 💌",
+  "If you say no I’ll be sad 🥺"
+];
+
+function no(){
+  document.getElementById("msg").innerText = messages[count] || "";
+  document.getElementById("yes").style.transform = `scale(${1 + count*0.4})`;
+  count++;
+  if(count > messages.length){
+    document.getElementById("no").style.display="none";
+  }
+}
+
+function yes(){
+  window.location.href="yes_page.html";
+}
+</script>
+
+</body>
+</html>

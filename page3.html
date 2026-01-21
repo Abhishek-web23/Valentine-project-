@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You 💌</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="hearts.css">
+
+  <style>
+    /* ENVELOPE ANIMATION */
+    .envelope-box {
+      font-size: 130px;
+      cursor: pointer;
+      transition: transform 0.5s ease;
+    }
+
+    .envelope-box.open {
+      transform: scale(1.1) rotateX(20deg);
+    }
+
+    .content {
+      margin-top: 20px;
+      animation: fadeIn 1s ease;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEART BACKGROUND -->
+<div class="hearts"></div>
+
+<div class="center">
+
+  <!-- ENVELOPE -->
+  <div id="envelope" class="envelope-box">📩</div>
+  <p class="tap">Tap to open</p>
+
+  <!-- CONTENT -->
+  <div id="letter" class="content hidden">
+    <ul>
+      <li>The way you exist make my world complete 🌸</li>
+      <li>Your smile quietly fixes everything 💗</li>
+      <li>Your presence feels safe and warm ✨</li>
+      <li>You bring peace just by being you 💖</li>
+      <li>You make ordinary days feel special 🌸✨</li>
+      <li>You are irreplaceable 💗</li>
+      <li>You are my everything baby 🥹💌💋</li>
+    </ul>
+
+    <button onclick="nextPage()">Next</button>
+  </div>
+
+</div>
+
+<script>
+  const envelope = document.getElementById("envelope");
+  const letter = document.getElementById("letter");
+
+  envelope.addEventListener("click", () => {
+    envelope.classList.add("open");
+    envelope.innerHTML = "💌";   // opened envelope
+    letter.classList.remove("hidden");
+  });
+
+  function nextPage() {
+    window.location.href = "page4.html";
+  }
+</script>
+
+</body>
+</html>

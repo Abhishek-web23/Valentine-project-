@@ -1,0 +1,139 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ================= CENTER ================= */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+/* ================= TEXT ================= */
+.text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* ================= FADE INTRO ================= */
+.fade {
+  font-size: 36px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= TAP TEXT ================= */
+.tap {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* ================= ENVELOPE ================= */
+#envelope {
+  font-size: 120px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ================= LIST ================= */
+ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 17px;
+  animation: fadeIn 0.8s ease;
+}
+
+/* ================= BUTTONS ================= */
+button {
+  margin-top: 20px;
+  padding: 12px 26px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#yes {
+  background: #ff4d6d;
+  color: #fff;
+}
+
+#no {
+  background: #555;
+  color: #fff;
+  margin-left: 10px;
+}
+
+/* ================= MESSAGE ================= */
+#msg {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+/* ================= HIDDEN ================= */
+.hidden {
+  display: none;
+}
+
+/* ================= HEADINGS ================= */
+h1 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 480px) {
+  .fade {
+    font-size: 30px;
+  }
+
+  .text p {
+    font-size: 16px;
+  }
+
+  #envelope {
+    font-size: 100px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 22px;
+  }
+}
